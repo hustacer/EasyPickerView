@@ -97,64 +97,16 @@ public class RateAdapter extends BaseAdapter {
                 }
             });
 
-//            viewHolder.rateContentEv.setOnTouchListener(new View.OnTouchListener() {
-//                @Override
-//                public boolean onTouch(View v, MotionEvent event) {
-//                    touchItemPosition = (int) v.getTag();
-//                    return false;
-//                }
-//            });
-//
-//            viewHolder.myTextWatcher = new RateTextWatcher();
-//            viewHolder.rateContentEv.addTextChangedListener(viewHolder.myTextWatcher);
-//            viewHolder.updatePosition(position);
-
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
-//            viewHolder.updatePosition(position);
         }
 
         viewHolder.rateCountryTv.setText(mList.get(position).rateCountry);
         viewHolder.rateContentEv.setText(mList.get(position).rateContent);
-//        viewHolder.rateContentEv.setTag(position);
-
-//        if (touchItemPosition == position) {
-//            viewHolder.rateContentEv.requestFocus();
-//            viewHolder.rateContentEv.setSelection(viewHolder.rateContentEv.getText()
-//                    .length());
-//        } else {
-//            viewHolder.rateContentEv.clearFocus();
-//        }
 
         return convertView;
     }
-//
-//    class RateTextWatcher implements TextWatcher {
-//        private int currentPosition;
-//
-//        public void updateWatcherPosition(int position) {
-//            currentPosition = position;
-//        }
-//
-//        @Override
-//        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//        }
-//
-//        @Override
-//        public void onTextChanged(CharSequence s, int start, int before, int count) {
-//
-//        }
-//
-//        @Override
-//        public void afterTextChanged(Editable s) {
-//            RateBean rateBean = (RateBean) getItem(currentPosition);
-//            for (int i = 0; i < mList.size(); i++) {
-//
-//            }
-//            rateBean.rateContent = s.toString();
-//        }
-//    }
 
     class ViewHolder {
         public TextView rateCountryTv;
