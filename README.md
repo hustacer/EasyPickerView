@@ -1,40 +1,7 @@
 # EasyPickerView
-A light PickerView for Android.
+1.使用EasyPickerView实现了滚轮效果。
+2.从http://apilayer.net/api/获取并解析到滚轮结构中
 
-## ScreenShots
-![picker](https://github.com/huzenan/EasyPickerView/blob/master/screenshots/picker.gif) 
-![scale](https://github.com/huzenan/EasyPickerView/blob/master/screenshots/scale.gif)
-
-## Usage
->layout
-
-```xml
-    <com.hzn.easypickerview.EasyPickerView
-        android:id="@+id/cpv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        custom:epvRecycleMode="true"
-        custom:epvTextColor="#4aa4a4"
-        custom:epvTextMaxScale="2.0"
-        custom:epvTextMinAlpha="0.35"
-        custom:epvTextPadding="10dp"
-        custom:epvTextSize="30sp"/>
-```
->Activity
-
-```java
-    cpv.setDataList(dataList);
-    cpv.setOnScrollChangedListener(new EasyPickerView.OnScrollChangedListener() {
-        @Override
-        public void onScrollChanged(int curIndex) {
-            // your codes.
-        }
-
-        @Override
-        public void onScrollFinished(int curIndex) {
-            // your codes.
-        }
-    });
-```
+未实现的功能：
+1.使用retrofit获取http://apilayer.net/api/中的数据（gson中数据太多，没有想到好方法）
+2.Listview中输入汇率进行实时转换（知识点不足）
